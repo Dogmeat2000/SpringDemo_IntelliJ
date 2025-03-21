@@ -21,12 +21,6 @@ RUN curl -fsSL https://apache.osuosl.org/maven/maven-3/3.9.6/binaries/apache-mav
 ENV MAVEN_HOME=/opt/maven
 ENV PATH=${MAVEN_HOME}/bin:${PATH}
 
-# Install IntelliJ IDEA Community Edition (optional, if you want IntelliJ pre-installed in the container)
-#RUN curl -fsSL https://download.jetbrains.com/idea/ideaIC-2023.3.2.tar.gz -o /tmp/idea.tar.gz \
-#    && tar -xzf /tmp/idea.tar.gz -C /opt \
-#    && ln -s /opt/idea-IC-* /opt/idea \
-#    && rm /tmp/idea.tar.gz
-
 # Copy the Spring Boot project files into the container (assumes your project is in the current directory)
 COPY . .
 
